@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>إنشاء حساب مشتري</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>إنشاء حساب مشتري</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -33,25 +37,29 @@
             },
         }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
+
         body {
-          min-height: max(884px, 100dvh);
-          background-color: #FFFFFF;
+            min-height: max(884px, 100dvh);
+            background-color: #FFFFFF;
         }
+
         .glass-effect {
             background: rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(0, 0, 0, 0.05);
         }
+
         .glow-effect {
             position: absolute;
             z-index: -1;
             filter: blur(100px);
         }
+
         .glow-top-left {
             top: -10%;
             left: -20%;
@@ -61,6 +69,7 @@
             opacity: 0.3;
             border-radius: 9999px;
         }
+
         .glow-bottom-right {
             bottom: -15%;
             right: -25%;
@@ -71,69 +80,105 @@
             border-radius: 9999px;
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="font-display text-gray-900 antialiased">
-<div class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden p-4">
-<div class="glow-effect glow-top-left"></div>
-<div class="glow-effect glow-bottom-right"></div>
-<main class="relative z-10 flex w-full max-w-md flex-col items-center">
-<div class="mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 ring-1 ring-primary/20">
-<span class="material-symbols-outlined text-4xl text-primary">storefront</span>
-</div>
-<h1 class="text-gray-900 text-3xl font-bold leading-tight tracking-tight mb-8 text-center">إنشاء حساب مشتري</h1>
-<div class="glass-effect flex w-full flex-col gap-4 rounded-xl p-6 shadow-md md:p-8">
-<form class="flex flex-col gap-5">
-<label class="flex w-full flex-col">
-<p class="text-gray-700 text-sm font-medium leading-normal pb-2">الاسم الكامل</p>
-<div class="flex w-full flex-1 items-stretch rounded-lg bg-white/60 ring-1 ring-inset ring-gray-200 focus-within:ring-2 focus-within:ring-primary/50">
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border-none bg-transparent px-4 py-3.5 text-gray-900 placeholder:text-gray-400 focus:outline-0 focus:ring-0 text-base font-normal leading-normal" placeholder="أدخل اسمك الكامل" value=""/>
-<div class="flex items-center justify-center pl-4 text-gray-400">
-<span class="material-symbols-outlined">person</span>
-</div>
-</div>
-</label>
-<label class="flex w-full flex-col">
-<p class="text-gray-700 text-sm font-medium leading-normal pb-2">البريد الإلكتروني</p>
-<div class="flex w-full flex-1 items-stretch rounded-lg bg-white/60 ring-1 ring-inset ring-gray-200 focus-within:ring-2 focus-within:ring-primary/50">
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border-none bg-transparent px-4 py-3.5 text-gray-900 placeholder:text-gray-400 focus:outline-0 focus:ring-0 text-base font-normal leading-normal" placeholder="أدخل بريدك الإلكتروني" type="email" value=""/>
-<div class="flex items-center justify-center pl-4 text-gray-400">
-<span class="material-symbols-outlined">mail</span>
-</div>
-</div>
-</label>
-<label class="flex w-full flex-col">
-<p class="text-gray-700 text-sm font-medium leading-normal pb-2">كلمة المرور</p>
-<div class="flex w-full flex-1 items-stretch rounded-lg bg-white/60 ring-1 ring-inset ring-gray-200 focus-within:ring-2 focus-within:ring-primary/50">
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border-none bg-transparent px-4 py-3.5 text-gray-900 placeholder:text-gray-400 focus:outline-0 focus:ring-0 text-base font-normal leading-normal" placeholder="أدخل كلمة المرور" type="password" value=""/>
-<div class="flex items-center justify-center pl-4 text-gray-400">
-<span class="material-symbols-outlined">lock</span>
-</div>
-</div>
-</label>
-<label class="flex w-full flex-col">
-<p class="text-gray-700 text-sm font-medium leading-normal pb-2">تأكيد كلمة المرور</p>
-<div class="flex w-full flex-1 items-stretch rounded-lg bg-white/60 ring-1 ring-inset ring-gray-200 focus-within:ring-2 focus-within:ring-primary/50">
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border-none bg-transparent px-4 py-3.5 text-gray-900 placeholder:text-gray-400 focus:outline-0 focus:ring-0 text-base font-normal leading-normal" placeholder="أعد إدخال كلمة المرور" type="password" value=""/>
-<div class="flex items-center justify-center pl-4 text-gray-400">
-<span class="material-symbols-outlined">lock</span>
-</div>
-</div>
-</label>
-<button class="mt-4 flex w-full items-center justify-center rounded-lg bg-primary px-6 py-3.5 text-base font-bold text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background-light" type="submit">
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="font-display text-gray-900 antialiased overflow-hidden h-[100dvh]">
+    <div class="relative flex h-full w-full flex-col items-center justify-center overflow-hidden p-4">
+        <div class="glow-effect glow-top-left"></div>
+        <div class="glow-effect glow-bottom-right"></div>
+        <main class="relative z-10 flex w-full max-w-md flex-col items-center animate-fade-in-up">
+            <div
+                class="mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 ring-1 ring-primary/20">
+                <span class="material-symbols-outlined text-4xl text-primary">storefront</span>
+            </div>
+            <h1 class="text-gray-900 text-3xl font-bold leading-tight tracking-tight mb-8 text-center">إنشاء حساب مشتري
+            </h1>
+            <div class="glass-effect flex w-full flex-col gap-4 rounded-xl p-6 shadow-md md:p-8">
+                <form class="flex flex-col gap-5">
+                    <label class="flex w-full flex-col">
+                        <p class="text-gray-700 text-sm font-medium leading-normal pb-2">الاسم الكامل</p>
+                        <div
+                            class="flex w-full flex-1 items-stretch rounded-lg bg-white/60 ring-1 ring-inset ring-gray-200 focus-within:ring-2 focus-within:ring-primary/50">
+                            <input
+                                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border-none bg-transparent px-4 py-3.5 text-gray-900 placeholder:text-gray-400 focus:outline-0 focus:ring-0 text-base font-normal leading-normal"
+                                placeholder="أدخل اسمك الكامل" value="" />
+                            <div class="flex items-center justify-center pl-4 text-gray-400">
+                                <span class="material-symbols-outlined">person</span>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="flex w-full flex-col">
+                        <p class="text-gray-700 text-sm font-medium leading-normal pb-2">البريد الإلكتروني</p>
+                        <div
+                            class="flex w-full flex-1 items-stretch rounded-lg bg-white/60 ring-1 ring-inset ring-gray-200 focus-within:ring-2 focus-within:ring-primary/50">
+                            <input
+                                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border-none bg-transparent px-4 py-3.5 text-gray-900 placeholder:text-gray-400 focus:outline-0 focus:ring-0 text-base font-normal leading-normal"
+                                placeholder="أدخل بريدك الإلكتروني" type="email" value="" />
+                            <div class="flex items-center justify-center pl-4 text-gray-400">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="flex w-full flex-col">
+                        <p class="text-gray-700 text-sm font-medium leading-normal pb-2">كلمة المرور</p>
+                        <div
+                            class="flex w-full flex-1 items-stretch rounded-lg bg-white/60 ring-1 ring-inset ring-gray-200 focus-within:ring-2 focus-within:ring-primary/50">
+                            <input
+                                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border-none bg-transparent px-4 py-3.5 text-gray-900 placeholder:text-gray-400 focus:outline-0 focus:ring-0 text-base font-normal leading-normal"
+                                placeholder="أدخل كلمة المرور" type="password" value="" />
+                            <div class="flex items-center justify-center pl-4 text-gray-400">
+                                <span class="material-symbols-outlined">lock</span>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="flex w-full flex-col">
+                        <p class="text-gray-700 text-sm font-medium leading-normal pb-2">تأكيد كلمة المرور</p>
+                        <div
+                            class="flex w-full flex-1 items-stretch rounded-lg bg-white/60 ring-1 ring-inset ring-gray-200 focus-within:ring-2 focus-within:ring-primary/50">
+                            <input
+                                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border-none bg-transparent px-4 py-3.5 text-gray-900 placeholder:text-gray-400 focus:outline-0 focus:ring-0 text-base font-normal leading-normal"
+                                placeholder="أعد إدخال كلمة المرور" type="password" value="" />
+                            <div class="flex items-center justify-center pl-4 text-gray-400">
+                                <span class="material-symbols-outlined">lock</span>
+                            </div>
+                        </div>
+                    </label>
+                    <button
+                        class="mt-4 flex w-full items-center justify-center rounded-lg bg-primary px-6 py-3.5 text-base font-bold text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background-light"
+                        type="submit">
                         إنشاء الحساب
                     </button>
-</form>
-</div>
-<p class="mt-8 text-center text-sm text-gray-500">
+                </form>
+            </div>
+            <p class="mt-8 text-center text-sm text-gray-500">
                 لديك حساب بالفعل؟
                 <a class="font-bold text-primary underline-offset-4 hover:underline" href="#">تسجيل الدخول</a>
-</p>
-</main>
-</div>
+            </p>
+        </main>
+        <style>
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translate3d(0, 20px, 0);
+                }
 
-</body></html>
+                to {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            .animate-fade-in-up {
+                animation: fadeInUp 0.8s ease-out forwards;
+            }
+        </style>
+    </div>
+
+</body>
+
+</html>

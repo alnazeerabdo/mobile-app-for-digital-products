@@ -1,104 +1,193 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>شاشة البدء</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<style>
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .dark .glass-effect {
-            background: rgba(41, 37, 36, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .glow-background {
-            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(195, 146, 86, 0.3), transparent),
-                        radial-gradient(ellipse 80% 50% at 50% 120%, rgba(195, 146, 86, 0.3), transparent);
-        }
-        .dark .glow-background {
-            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(195, 146, 86, 0.25), transparent),
-                        radial-gradient(ellipse 80% 50% at 50% 120%, rgba(195, 146, 86, 0.25), transparent);
-        }
-    </style>
-<script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#C39256",
-              "background-light": "#F8F8F8",
-              "background-dark": "#0A0A0A",
-            },
-            fontFamily: {
-              display: ["Tajawal", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "12px",
-            },
+<html dir="rtl" lang="ar">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>شاشة البدء</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <style>
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .dark .glass-effect {
+      background: rgba(41, 37, 36, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .glow-background {
+      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(195, 146, 86, 0.3), transparent),
+        radial-gradient(ellipse 80% 50% at 50% 120%, rgba(195, 146, 86, 0.3), transparent);
+    }
+
+    .dark .glow-background {
+      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(195, 146, 86, 0.25), transparent),
+        radial-gradient(ellipse 80% 50% at 50% 120%, rgba(195, 146, 86, 0.25), transparent);
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#C39256",
+            "background-light": "#F8F8F8",
+            "background-dark": "#0A0A0A",
+          },
+          fontFamily: {
+            display: ["Tajawal", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "12px",
           },
         },
-      };
-    </script>
-<style>
+      },
+    };
+  </script>
+  <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-<style>
+  <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head>
-<body class="font-display bg-background-light dark:bg-background-dark cursor-pointer" onclick="window.location.href='information_1.html'">
-<div class="relative min-h-screen w-full flex flex-col items-center overflow-hidden p-4">
-<div class="absolute inset-0 glow-background"></div>
-<div class="absolute top-[-20%] left-[-20%] w-72 h-72 bg-primary/20 rounded-full filter blur-3xl opacity-50 dark:opacity-30"></div>
-<div class="absolute bottom-[-15%] right-[-15%] w-80 h-80 bg-primary/20 rounded-full filter blur-3xl opacity-40 dark:opacity-20"></div>
-<div class="absolute top-0 left-0 right-0 p-4 pt-6 flex justify-between items-center text-gray-900 dark:text-gray-100 font-sans text-sm font-medium z-10">
-<div>9:41</div>
-<div class="flex items-center space-x-1">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-<svg class="w-5 h-5" fill="currentColor" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.752 8.716A7.5 7.5 0 017.5 3.052a7.5 7.5 0 01-4.698 13.29zM15 15.75a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</div>
-</div>
-<div class="flex-grow flex items-center justify-center">
-<main class="z-10 flex flex-col items-center justify-center text-center">
-<div class="flex flex-col items-center">
-<div class="mb-6">
-<svg class="text-primary" fill="none" height="80" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="80" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 21h16"></path>
-<path d="M12 21V7l-4-4-4 4"></path>
-<path d="M20 11l-4-4-4 4"></path>
-<path d="M6 13h12a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2z"></path>
-</svg>
-</div>
-<h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-2">متجرك الرقمي</h1>
-<p class="text-base text-gray-600 dark:text-gray-300 max-w-xs">
-                مرحباً بك في وجهتك الأولى للمنتجات الرقمية المبتكرة.
-            </p>
-</div>
-</main>
-</div>
-<div class="w-full max-w-sm mx-auto z-10 pb-10">
-<div class="flex flex-col items-center">
-<div class="w-full flex justify-between items-center mb-1 text-sm text-gray-700 dark:text-gray-300">
-<span>جار التحميل...</span>
-<span>%65</span>
-</div>
-<div class="w-full h-3.5 glass-effect rounded-full overflow-hidden shadow-inner">
-<div class="h-full bg-primary" style="width: 65%;"></div>
-</div>
-</div>
-</div>
-</div>
-</body></html>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark overflow-hidden h-[100dvh]">
+  <div class="relative h-full w-full flex flex-col items-center justify-between p-6 overflow-hidden">
+    <div class="absolute inset-0 glow-background"></div>
+    <div
+      class="absolute top-[-20%] left-[-20%] w-72 h-72 bg-primary/20 rounded-full filter blur-3xl opacity-50 dark:opacity-30 animate-pulse">
+    </div>
+    <div
+      class="absolute bottom-[-15%] right-[-15%] w-80 h-80 bg-primary/20 rounded-full filter blur-3xl opacity-40 dark:opacity-20 animate-pulse"
+      style="animation-delay: 1s;"></div>
+
+    <div
+      class="absolute top-0 left-0 right-0 p-4 pt-6 flex justify-between items-center text-gray-900 dark:text-gray-100 font-sans text-sm font-medium z-10">
+      <div>9:41</div>
+      <div class="flex items-center space-x-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z"
+            stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <svg class="w-5 h-5" fill="currentColor" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.752 8.716A7.5 7.5 0 017.5 3.052a7.5 7.5 0 01-4.698 13.29zM15 15.75a3 3 0 11-6 0 3 3 0 016 0z"
+            stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class="flex-grow flex items-center justify-center w-full">
+      <main class="z-10 flex flex-col items-center justify-center text-center w-full max-w-md animate-fade-in-up">
+        <div class="flex flex-col items-center">
+          <div class="mb-8 transform transition-all duration-700 hover:scale-110">
+            <svg class="text-primary drop-shadow-lg" fill="none" height="100" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="100"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 21h16"></path>
+              <path d="M12 21V7l-4-4-4 4"></path>
+              <path d="M20 11l-4-4-4 4"></path>
+              <path d="M6 13h12a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2z"></path>
+            </svg>
+          </div>
+          <h1 class="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-3 tracking-tight">متجرك الرقمي</h1>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-xs leading-relaxed opacity-90">
+            مرحباً بك في وجهتك الأولى للمنتجات الرقمية المبتكرة.
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <div class="w-full max-w-xs mx-auto z-10 pb-16 animate-fade-in" style="animation-delay: 0.3s;">
+      <div class="flex flex-col items-center">
+        <div class="w-full flex justify-between items-center mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+          <span id="loading-text">جار التحميل...</span>
+          <span id="loading-percentage">0%</span>
+        </div>
+        <div class="w-full h-2 glass-effect rounded-full overflow-hidden shadow-inner bg-gray-200/20">
+          <div id="loading-bar"
+            class="h-full bg-primary transition-all duration-100 ease-out shadow-[0_0_10px_rgba(195,146,86,0.5)]"
+            style="width: 0%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+      opacity: 0;
+      /* Start hidden */
+      animation-fill-mode: forwards;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const bar = document.getElementById('loading-bar');
+      const percentage = document.getElementById('loading-percentage');
+      let width = 0;
+
+      // Simulating loading
+      const interval = setInterval(() => {
+        if (width >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            window.location.href = 'information_1.html';
+          }, 500); // Small delay before redirect
+        } else {
+          width++;
+          bar.style.width = width + '%';
+          percentage.textContent = width + '%';
+        }
+      }, 30); // Adjust speed here (lower is faster)
+    });
+  </script>
+</body>
+
+</html>
