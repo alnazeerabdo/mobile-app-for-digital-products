@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>بيع المنتجات</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#A98553",
+            "background-light": "#F8F8F8",
+            "background-dark": "#121212",
+          },
+          fontFamily: {
+            display: ["Tajawal", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+
+    .glow-effect::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(169, 133, 83, 0.15), transparent 60%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+  <div
+    class="relative min-h-screen w-full max-w-sm mx-auto flex flex-col items-center justify-between p-6 overflow-hidden glow-effect">
+    <header class="w-full flex justify-between items-center z-10">
+      <button class="p-2" onclick="window.location.href='information_1.html'">
+        <span class="material-icons-outlined text-gray-800 dark:text-gray-200">arrow_forward_ios</span>
+      </button>
+      <button class="text-primary text-lg font-medium"
+        onclick="window.location.href='chose_the_account.html'">تخطي</button>
+    </header>
+    <main class="flex flex-col items-center text-center px-4 z-10">
+      <div class="relative w-72 h-72 mb-10">
+        <div
+          class="absolute inset-0 bg-white/30 dark:bg-white/10 backdrop-blur-lg rounded-full border border-white/20 dark:border-white/10 shadow-lg">
+        </div>
+        <div class="relative w-full h-full flex items-center justify-center p-4">
+          <span class="material-icons-outlined text-primary dark:text-primary/80"
+            style="font-size: 160px;">storefront</span>
+        </div>
+      </div>
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">بيع منتجاتك الرقمية</h1>
+      <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+        انضم إلى منصتنا وقم ببيع منتجاتك الرقمية بسهولة. الوصول إلى جمهور واسع وتحقيق الدخل من إبداعاتك.
+      </p>
+    </main>
+    <footer class="w-full z-10">
+      <div class="flex justify-center items-center mb-8 gap-x-2">
+        <div class="w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-700 opacity-50"></div>
+        <div class="w-6 h-2.5 rounded-full bg-primary"></div>
+      </div>
+      <button
+        class="w-full bg-primary text-white text-lg font-bold py-4 rounded-xl shadow-lg shadow-primary/30 hover:opacity-90 transition-opacity"
+        onclick="window.location.href='chose_the_account.html'">
+        التالي
+      </button>
+    </footer>
+  </div>
+
+</body>
+
+</html>

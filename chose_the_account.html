@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>اختيار نوع الحساب</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#A37A44",
+            "background-light": "#F7F8FA",
+            "background-dark": "#121212",
+          },
+          fontFamily: {
+            display: ["Tajawal", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .glassmorphism-light {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .glassmorphism-dark {
+      background: rgba(40, 40, 40, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+  <div
+    class="relative min-h-screen w-full max-w-md mx-auto flex flex-col items-center justify-center p-6 overflow-hidden">
+    <div class="absolute -top-20 -left-20 w-80 h-80 bg-primary/30 rounded-full filter blur-3xl opacity-60"></div>
+    <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/30 rounded-full filter blur-3xl opacity-60"></div>
+    <div class="absolute top-16 z-10">
+      <div class="flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full">
+        <span class="material-icons-outlined text-primary text-5xl">inventory_2</span>
+      </div>
+    </div>
+    <div class="z-10 w-full flex flex-col items-center text-center">
+      <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-2">أنشئ حسابك</h1>
+      <p class="text-gray-600 dark:text-gray-400 text-lg">اختر نوع الحساب الذي يناسبك</p>
+      <div class="w-full space-y-5 mt-12">
+        <div
+          class="w-full p-6 rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 glassmorphism-light dark:glassmorphism-dark"
+          onclick="window.location.href='seller_account.html'">
+          <div class="flex items-center space-x-reverse space-x-4">
+            <div class="bg-primary/10 p-3 rounded-full">
+              <span class="material-icons-outlined text-primary text-3xl">storefront</span>
+            </div>
+            <div class="text-right">
+              <h2 class="text-xl font-bold text-gray-900 dark:text-white">حساب بائع</h2>
+              <p class="text-gray-500 dark:text-gray-300">لبيع منتجاتك الرقمية بسهولة</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full p-6 rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 glassmorphism-light dark:glassmorphism-dark"
+          onclick="window.location.href='bayer_page.html'">
+          <div class="flex items-center space-x-reverse space-x-4">
+            <div class="bg-primary/10 p-3 rounded-full">
+              <span class="material-icons-outlined text-primary text-3xl">shopping_bag</span>
+            </div>
+            <div class="text-right">
+              <h2 class="text-xl font-bold text-gray-900 dark:text-white">حساب مشتري</h2>
+              <p class="text-gray-500 dark:text-gray-300">لتصفح وشراء أفضل المنتجات</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-10 z-10">
+      <p class="text-gray-500 dark:text-gray-400">
+        هل لديك حساب بالفعل؟ <a class="font-bold text-primary hover:underline" href="#">تسجيل الدخول</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>
