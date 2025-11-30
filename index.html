@@ -110,25 +110,15 @@
             </svg>
           </div>
           <h1 class="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-3 tracking-tight">متجرك الرقمي</h1>
-          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-xs leading-relaxed opacity-90">
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-xs leading-relaxed opacity-90 mb-10">
             مرحباً بك في وجهتك الأولى للمنتجات الرقمية المبتكرة.
           </p>
+          <button onclick="window.location.href='information_1.html'"
+            class="bg-primary text-white text-xl font-bold py-4 px-12 rounded-xl shadow-lg shadow-primary/30 hover:opacity-90 hover:scale-105 transition-all duration-300">
+            إبدأ الآن
+          </button>
         </div>
       </main>
-    </div>
-
-    <div class="w-full max-w-xs mx-auto z-10 pb-16 animate-fade-in" style="animation-delay: 0.3s;">
-      <div class="flex flex-col items-center">
-        <div class="w-full flex justify-between items-center mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
-          <span id="loading-text">جار التحميل...</span>
-          <span id="loading-percentage">0%</span>
-        </div>
-        <div class="w-full h-2 glass-effect rounded-full overflow-hidden shadow-inner bg-gray-200/20">
-          <div id="loading-bar"
-            class="h-full bg-primary transition-all duration-100 ease-out shadow-[0_0_10px_rgba(195,146,86,0.5)]"
-            style="width: 0%;"></div>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -145,49 +135,10 @@
       }
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
     .animate-fade-in-up {
       animation: fadeInUp 0.8s ease-out forwards;
     }
-
-    .animate-fade-in {
-      animation: fadeIn 0.8s ease-out forwards;
-      opacity: 0;
-      /* Start hidden */
-      animation-fill-mode: forwards;
-    }
   </style>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const bar = document.getElementById('loading-bar');
-      const percentage = document.getElementById('loading-percentage');
-      let width = 0;
-
-      // Simulating loading
-      const interval = setInterval(() => {
-        if (width >= 100) {
-          clearInterval(interval);
-          setTimeout(() => {
-            window.location.href = 'information_1.html';
-          }, 500); // Small delay before redirect
-        } else {
-          width++;
-          bar.style.width = width + '%';
-          percentage.textContent = width + '%';
-        }
-      }, 30); // Adjust speed here (lower is faster)
-    });
-  </script>
 </body>
 
 </html>
